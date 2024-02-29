@@ -1,17 +1,10 @@
-var count = 1;
+let count = 0;
+const colors=['yellow', 'green', 'red']
 
 function changeColor() {
-    var property = document.getElementById('acces-button');
-    if (count == 1) {
-        property.style.backgroundColor = '#ffc107'
-        count = 2
-    } else if (count == 2) {
-        property.style.backgroundColor = '#28a745'
-        count = 0
-    } else {
-        property.style.backgroundColor = '#dc3545'
-        count = 1;
-    }
+    let property = document.getElementById('acces-button');
+    count = (count + 1) % colors.length;
+    property.style.backgroundColor = colors[count];
 }
 
 setInterval(changeColor, 10000);
