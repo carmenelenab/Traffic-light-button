@@ -1,5 +1,5 @@
 let count = 0;
-const colors=['yellow', 'green', 'red']
+let colors=['yellow', 'green', 'red']
 
 function changeColor() {
     let property = document.getElementById('acces-button');
